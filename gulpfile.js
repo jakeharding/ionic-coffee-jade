@@ -50,9 +50,6 @@ gulp.task('coffee_compile', ['coffee_lint'], function () {
     gulp.src(paths.coffee)
         .pipe(coffee())
         .pipe(gulp.dest(paths.coffee_dest));
-    // gulp.src('coffee/specs/*Spec.coffee')
-    //     .pipe(coffee({bare: true}))
-    //     .pipe(gulp.dest(destination + 'specs'));
 });
 
 gulp.task('coffee_min', ['coffee_compile'], function () {
@@ -62,22 +59,11 @@ gulp.task('coffee_min', ['coffee_compile'], function () {
         .pipe(gulp.dest(paths.js_min))
 });
 
-// gulp.task('source_map', ['coffee_min'], function () {
-//     gulp.src(paths.coffee_dest + paths.app_file)
-//       .pipe(sourcemap({
-//           outSourceMap: paths.app_file+".map",
-//           // sourceRoot:"http://jslite.io",
-//           write:paths.js_min
-//       }))
-//       .pipe(gulp.dest(paths.js_min))
-// })
-
 gulp.task('coffee', ['coffee_min'], function () {
   gulp.src(paths.coffee_dest+"*.js")
     .pipe(sourcemaps.init())
       .pipe(ugly())
       .pipe(concat(paths.app_file))
-      // .pipe(gulp.dest(paths.js_min))
     .pipe(sourcemaps.write('maps'))
     .pipe(gulp.dest(paths.js_min))
 
