@@ -1,1 +1,0 @@
-(function(){var o;o=["ionic"],angular.module("tgMobile",o).run(function(o){return o.ready(function(){return window.cordova&&window.cordova.plugins.Keyboard&&(cordova.plugins.Keyboard.hideKeyboardAccessoryBar(!0),cordova.plugins.Keyboard.disableScroll(!0)),window.StatusBar?StatusBar.styleDefault():void 0})})}).call(this);

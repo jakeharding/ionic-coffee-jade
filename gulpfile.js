@@ -19,7 +19,7 @@ var paths = {
   app_file: "app.min.js"
 };
 
-gulp.task('default', ['watch', 'serve']);
+gulp.task('default', ['coffee', 'sass', 'watch']);
 
 gulp.task('sass', function(done) {
   gulp.src('./scss/ionic.app.scss')
@@ -72,13 +72,13 @@ gulp.task('coffee_min', ['coffee_compile'], function () {
 //       .pipe(gulp.dest(paths.js_min))
 // })
 
-gulp.task('coffee', ['coffee_compile'], function () {
+gulp.task('coffee', ['coffee_min'], function () {
   gulp.src(paths.coffee_dest+"*.js")
     .pipe(sourcemaps.init())
       .pipe(ugly())
       .pipe(concat(paths.app_file))
       // .pipe(gulp.dest(paths.js_min))
-    .pipe(sourcemaps.write(paths.js_min+"maps"))
+    .pipe(sourcemaps.write('maps'))
     .pipe(gulp.dest(paths.js_min))
 
 });

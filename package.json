@@ -1,7 +1,7 @@
 {
-  "name": "taiga-mobile",
+  "name": "ionic-coffee-jade",
   "version": "0.0.1",
-  "description": "Taiga mobile built with ionic",
+  "description": "Ionic starter for using coffee-script and jade.",
   "dependencies": {
     "gulp": "^3.5.6",
     "gulp-sass": "^2.0.4",
@@ -20,6 +20,7 @@
     "gulp-sourcemaps": "^1.6.0",
     "gulp-uglify": "^1.5.3",
     "gulp-util": "^2.2.14",
+    "jade": "^1.11.0",
     "shelljs": "^0.3.0"
   },
   "cordovaPlugins": [

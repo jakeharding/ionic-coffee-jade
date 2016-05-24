@@ -5,7 +5,7 @@ modules = [
 ]
 
 
-angular.module("tgMobile", modules)
+angular.module("app", modules)
     
     .run ($ionicPlatform, $http) ->
         $ionicPlatform.ready () ->
