@@ -6,3 +6,5 @@ platforms/
 plugins/
 www/js/*
 js/*
+www/*.html
+www/partials/*
