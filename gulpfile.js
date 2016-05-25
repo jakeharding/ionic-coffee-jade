@@ -19,8 +19,8 @@ var paths = {
   coffee_dest: './js/',
   index_temp: "./jade/index.jade",
   jade: ['./jade/*.jade', './jade/**/*.jade'],
-  jade_dest: root + "partials/",
-  js_min: root + "js/",
+  jade_dest: "./www/partials/",
+  js_min: "./www/js/",
   app_file: "app.min.js"
 };
 
